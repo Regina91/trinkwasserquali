@@ -1,0 +1,561 @@
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Städtevergleich</title>
+	<meta name="description" content="Trinkwasserqualität in NRW">
+	 <meta name="author" content="Entezari, Kasakowskij, Mariami, Weber">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/transitions.css">
+	<link rel="stylesheet" href="css/color.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="icon" href="images\tropfen.png" />
+	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
+	<script type="text/javascript">
+		google.charts.load('current', {packages: ['corechart', 'bar']});
+	    
+	    function drawGID() {
+	    	var Stadt1 = document.getElementById("Stadt1").value;
+	    	var Stadt2 = document.getElementById("Stadt2").value;
+	    	var Parameter = document.getElementById("Parameter").value;
+	      var queryString = encodeURIComponent("SELECT A,"+Parameter+" WHERE (A = '"+Stadt1+"' OR A = '"+Stadt2+"')");
+	      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1bughsXQJfo6ttV9bm9wAKyiXVbmKA_YJ_fH8Skllf-0/gviz/tq?tqx=out:html&gid=0&headers=1&tq=' + queryString);
+	      //query.setQuery(queryString);
+	      query.send(handleQueryResponse);
+	    }
+	
+	    function handleQueryResponse(response) {
+	      if (response.isError()) {
+	        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+	        return;
+	      }
+	
+	      var data = response.getDataTable();
+	      //console.log(data);
+	      //alert(data);
+	      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+	      var options = {
+	      	vAxis: {minValue: 0},
+	      	height: 400
+            };
+	      chart.draw(data, options);
+	      
+	    }
+	    
+	</script>
+	    
+	
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="preloader-bg">
+		<div class="preloader">
+			<div class="preloader-top">
+				<div class="preloader-top-sun">
+					<div class="preloader-top-sun-bg"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-0"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-45"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-90"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-135"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-180"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-225"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-270"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-315"></div>
+				</div>
+			</div>
+			<div class="preloader-bottom">
+				<div class="preloader-bottom-line preloader-bottom-line-lg"></div>
+				<div class="preloader-bottom-line preloader-bottom-line-md"></div>
+				<div class="preloader-bottom-line preloader-bottom-line-sm"></div>
+				<div class="preloader-bottom-line preloader-bottom-line-xs"></div>
+			</div>
+		</div>
+	</div>
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="wrapper" class="tg-haslayout">
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="header" class="tg-header tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<strong class="logo">
+							<a href="index.html"> <img src="images/logo22.png" alt="image description"></a>
+						</strong>
+						<div class="tg-rightarea">
+							<nav id="tg-nav" class="tg-nav">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class="navbar-right">
+										<li ><a href="index.html">Trinkwasserqualität</a>
+										
+									</li>
+									<li><a href="karte.html">&uuml;bersichtskarte NRW</a></li>
+									<li class="active"><a href="#">Trinkwasserwerte</a>
+									 <ul>
+											<li><a href="stadt.html">Stadtauswahl</a></li>
+											<li><a href="vergleich2.html">Städtevergleich</a></li>
+										</ul>
+									</li>
+                              <li>
+                                 <a href="#">Eigenschaften</a>
+                                 <ul>
+                                    <li><a href="info.html">Inhaltsstoffe</a></li>
+                                    <li><a href="grenzwerte.html">Grenzwerte</a></li>
+                                 </ul>
+                              </li>
+									<li> <a href="#">About</a>
+				                         <ul>
+										<li><a href="team.html">Das Team</a></li>
+										<li><a href="impressum.html">Impressum</a></li>
+									   	<li><a href="impressum.html">Lizenzen</a></li>
+									   	<li><a href="impressum.html">Daten</a></li>
+										</ul>
+									</li>
+                              
+									<!--<li>
+										<a href="#"><span>pages</span><i class="fa fa-navicon"></i></a>
+										<ul>
+											<li><a href="team.html">team</a></li>
+											<li><a href="contactus.html">contact us</a></li>
+										</ul>
+									</li> !-->
+									</ul>
+								</div>
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--************************************
+				Header End
+		*************************************-->
+		<!--************************************
+				Banner Start
+		*************************************-->
+		<div class="tg-main-section tg-banner tg-haslayout parallax-window" data-parallax="scroll" data-bleed="100" data-speed="0.2" data-image-src="images/slider/img1.jpg">
+			<div class="container">
+			<ul class="tg-breadcrumb">
+				<li>Stadt</li>
+				<li>Vergleichstabelle</li>
+			</ul>
+			</div>
+		</div>
+		<!--************************************
+				Banner End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="main" class="tg-haslayout">
+		
+
+<!--************************************
+			Featured Products Start
+	*************************************-->
+		    <section class="tg-main-section tg-haslayout">
+		      <div class="container">
+		        <div class="row">
+		          <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+		            <div class="tg-section-head">
+						<h2>Städtevergleich</h2>
+					  </div>
+					  <div class="tg-description">
+						<p align="center" style="font-size:16px;">
+						Wähle zwei Regionen deiner Wahl und vergleiche die Parameter <br><br>
+						</p>
+					  </div>
+						
+						
+		            	<form action="/action_page.php">
+		            		<label><b style="color: #16427e;">Stadt 1 :</b></label>
+						  <select name="Stadt1" id="Stadt1">
+						  	<option value='Aachen'>Aachen</option>
+							<option value='Bielefeld'>Bielefeld</option>
+							<option value='Bochum'>Bochum</option>
+							<option value='Bonn'>Bonn</option>
+							<option value='Borken'>Borken</option>
+							<option value='Bottrop'>Bottrop</option>
+							<option value='Brilon'>Brilon</option>
+							<option value='Coesfeld'>Coesfeld</option>
+							<option value='Dortmund'>Dortmund</option>
+							<option value='Duisburg'>Duisburg</option>
+							<option value='Düren'>Düren</option>
+							<option value='Düsseldorf'>Düsseldorf</option>
+							<option value='Ennepe-Ruhr-Kreis'>Ennepe-Ruhr-Kreis</option>
+							<option value='Rhein-Erft-Kreis'>Rhein-Erft-Kreis</option>
+							<option value='Essen'>Essen</option>
+							<option value='Euskirchen'>Euskirchen</option>
+							<option value='Gelsenkirchen'>Gelsenkirchen</option>
+							<option value='Gütersloh'>Gütersloh</option>
+							<option value='Hagen'>Hagen</option>
+							<option value='Hamm'>Hamm</option>
+							<option value='Heinsberg'>Heinsberg</option>
+							<option value='Herford'>Herford</option>
+							<option value='Herne'>Herne</option>
+							<option value='Hochsauerlandkreis'>Hochsauerlandkreis</option>
+							<option value='Höxter'>Höxter</option>
+							<option value='Kleve'>Kleve</option>
+							<option value='Köln'>Köln</option>
+							<option value='Krefeld'>Krefeld</option>
+							<option value='Leverkusen'>Leverkusen</option>
+							<option value='Lippe'>Lippe</option>
+							<option value='Märkischer Kreis'>Märkischer Kreis</option>
+							<option value='Marsberg'>Marsberg</option>
+							<option value='Mettmann'>Mettmann</option>
+							<option value='Minden-Lübbecke'>Minden-Lübbecke</option>
+							<option value='Mönchengladbach'>Mönchengladbach</option>
+							<option value='Mülheim an der Ruhr'>Mülheim an der Ruhr</option>
+							<option value='Münster'>Münster</option>
+							<option value='Oberbergischer Kreis'>Oberbergischer Kreis</option>
+							<option value='Oberhausen'>Oberhausen</option>
+							<option value='Olpe'>Olpe</option>
+							<option value='Paderborn'>Paderborn</option>
+							<option value='Recklinghausen'>Recklinghausen</option>
+							<option value='Remscheid'>Remscheid</option>
+							<option value='Rhein-Erft-Kreis'>Rhein-Erft-Kreis</option>
+							<option value='Rhein-Kreis Neuss'>Rhein-Kreis Neuss</option>
+							<option value='Rhein-Sieg-Kreis'>Rhein-Sieg-Kreis</option>
+							<option value='Rheinisch-Bergischer Kreis'>Rheinisch-Bergischer Kreis</option>
+							<option value='Siegen-Wittgenstein'>Siegen-Wittgenstein</option>
+							<option value='Soest'>Soest</option>
+							<option value='Solingen'>Solingen</option>
+							<option value='Steinfurt'>Steinfurt</option>
+							<option value='Unna'>Unna</option>
+							<option value='Viersen'>Viersen</option>
+							<option value='Warendorf'>Warendorf</option>
+							<option value='Wesel'>Wesel</option>
+							<option value='Wuppertal'>Wuppertal</option>
+						  </select><label></label>
+						  <label><b style="color: #16427e;">Stadt 2 :</b></label>
+						  <select name="Stadt2" id="Stadt2">
+						  	<option value='Aachen'>Aachen</option>
+							<option value='Bielefeld'>Bielefeld</option>
+							<option value='Bochum'>Bochum</option>
+							<option value='Bonn'>Bonn</option>
+							<option value='Borken'>Borken</option>
+							<option value='Bottrop'>Bottrop</option>
+							<option value='Brilon'>Brilon</option>
+							<option value='Coesfeld'>Coesfeld</option>
+							<option value='Dortmund'>Dortmund</option>
+							<option value='Duisburg'>Duisburg</option>
+							<option value='Düren'>Düren</option>
+							<option value='Düsseldorf'>Düsseldorf</option>
+							<option value='Ennepe-Ruhr-Kreis'>Ennepe-Ruhr-Kreis</option>
+							<option value='Rhein-Erft-Kreis'>Rhein-Erft-Kreis</option>
+							<option value='Essen'>Essen</option>
+							<option value='Euskirchen'>Euskirchen</option>
+							<option value='Gelsenkirchen'>Gelsenkirchen</option>
+							<option value='Gütersloh'>Gütersloh</option>
+							<option value='Hagen'>Hagen</option>
+							<option value='Hamm'>Hamm</option>
+							<option value='Heinsberg'>Heinsberg</option>
+							<option value='Herford'>Herford</option>
+							<option value='Herne'>Herne</option>
+							<option value='Hochsauerlandkreis'>Hochsauerlandkreis</option>
+							<option value='Höxter'>Höxter</option>
+							<option value='Kleve'>Kleve</option>
+							<option value='Köln'>Köln</option>
+							<option value='Krefeld'>Krefeld</option>
+							<option value='Leverkusen'>Leverkusen</option>
+							<option value='Lippe'>Lippe</option>
+							<option value='Märkischer Kreis'>Märkischer Kreis</option>
+							<option value='Marsberg'>Marsberg</option>
+							<option value='Mettmann'>Mettmann</option>
+							<option value='Minden-Lübbecke'>Minden-Lübbecke</option>
+							<option value='Mönchengladbach'>Mönchengladbach</option>
+							<option value='Mülheim an der Ruhr'>Mülheim an der Ruhr</option>
+							<option value='Münster'>Münster</option>
+							<option value='Oberbergischer Kreis'>Oberbergischer Kreis</option>
+							<option value='Oberhausen'>Oberhausen</option>
+							<option value='Olpe'>Olpe</option>
+							<option value='Paderborn'>Paderborn</option>
+							<option value='Recklinghausen'>Recklinghausen</option>
+							<option value='Remscheid'>Remscheid</option>
+							<option value='Rhein-Erft-Kreis'>Rhein-Erft-Kreis</option>
+							<option value='Rhein-Kreis Neuss'>Rhein-Kreis Neuss</option>
+							<option value='Rhein-Sieg-Kreis'>Rhein-Sieg-Kreis</option>
+							<option value='Rheinisch-Bergischer Kreis'>Rheinisch-Bergischer Kreis</option>
+							<option value='Siegen-Wittgenstein'>Siegen-Wittgenstein</option>
+							<option value='Soest'>Soest</option>
+							<option value='Solingen'>Solingen</option>
+							<option value='Steinfurt'>Steinfurt</option>
+							<option value='Unna'>Unna</option>
+							<option value='Viersen'>Viersen</option>
+							<option value='Warendorf'>Warendorf</option>
+							<option value='Wesel'>Wesel</option>
+							<option value='Wuppertal'>Wuppertal</option>
+						  </select>
+						  <br><label></label>
+						  <label><b style="color: #16427e;">Parameter :</b></label>
+						  <select name="Parameter" id="Parameter">
+								<option value='B'>Temperatur</option>
+								<option value='C'>Lufttemperatur</option>
+								<option value='D'>Elektrische Leitfähigkeit (25°C)</option>
+								<option value='E'>Elektrische Leitfähigkeit (20°C)</option>
+								<option value='F'>Geruch</option>
+								<option value='G'>Geruchsschwellenwert</option>
+								<option value='H'>Geschmack</option>
+								<option value='I'>pH-Wert</option>
+								<option value='J'>Färbung (SAK 436 nm)</option>
+								<option value='K'>Trübung</option>
+								<option value='L'>Trübung</option>
+								<option value='M'>TOC</option>
+								<option value='N'>Sauerstoff</option>
+								<option value='O'>Säurekapazität bis pH 4.3</option>
+								<option value='P'>Basekapazität bis pH 8.2</option>
+								<option value='Q'>Härte</option>
+								<option value='R'>Gesamthärte</option>
+								<option value='S'>Karbonathärte</option>
+								<option value='T'>Härtebereich</option>
+								<option value='U'>Calcitlösekapazität</option>
+								<option value='V'>Ammonium</option>
+								<option value='W'>Calcium</option>
+								<option value='X'>Eisen</option>
+								<option value='Y'>Kalium</option>
+								<option value='Z'>Magnesium</option>
+								<option value='AA'>Mangan</option>
+								<option value='AB'>Natrium</option>
+								<option value='AC'>Bromat</option>
+								<option value='AD'>Bromid</option>
+								<option value='AE'>Chlorid</option>
+								<option value='AF'>Cyanid</option>
+								<option value='AG'>Fluorid</option>
+								<option value='AH'>Kieselsäure (SiO2)</option>
+								<option value='AI'>Silikat</option>
+								<option value='AJ'>Silicium</option>
+								<option value='AK'>Nitrat</option>
+								<option value='AL'>Nitrit</option>
+								<option value='AM'>Phosphat</option>
+								<option value='AN'>Sulfat</option>
+								<option value='AO'>Aluminium</option>
+								<option value='AQ'>Antimon</option>
+								<option value='AS'>Arsen</option>
+								<option value='AU'>Blei</option>
+								<option value='AW'>Bor</option>
+								<option value='AX'>Cadmium</option>
+								<option value='AZ'>Chrom</option>
+								<option value='BB'>Kupfer</option>
+								<option value='BD'>Nickel</option>
+								<option value='BF'>Quecksilber</option>
+								<option value='BH'>Selen</option>
+								<option value='BJ'>Uran</option>
+								<option value='BM'>Benzo-[a]-pyren</option>
+								<option value='BN'>Polyzyklische aromatische Kohlenwasserstoffe (PAK)</option>
+								<option value='BP'>Benzol</option>
+								<option value='BR'>1.2 Dichlorethan</option>
+								<option value='BS'>Tetrachlorethen und Trichlorethen</option>
+								<option value='BT'>Trichlorethen</option>
+								<option value='BV'>Tetrachlorethen</option>
+								<option value='BX'>Trihalogenmethane Summe</option>
+								<option value='BY'>Pflanzenschutz2 insgesamt</option>
+								<option value='BZ'>Perfluorierte Tenside</option>
+								<option value='CA'>Clostridium perfringens</option>
+								<option value='CB'>Coliforme Bakterien</option>
+								<option value='CC'>Enterokokken</option>
+								<option value='CD'>Escherichia coli (E.coli)</option>
+								<option value='CE'>Koloniezahl bei 22°</option>
+								<option value='CF'>Koloniezahl bei 36° </option>
+								<option value='CG'>Hydrogencarbonat</option>
+								<option value='CH'>Hydrogencarbonat</option>
+								<option value='CI'>Calciumcarbonat</option>
+								<option value='CJ'>Freie Kohlensäure</option>
+								<option value='CK'>Gadolinium</option>
+								<option value='CL'>Strontium</option>
+								<option value='CM'>Zink</option>
+								<option value='CO'>Radon-222</option>
+								<option value='CP'>Oxidierbarkeit</option>
+								<option value='CQ'>Pflanzenschutz2wirkstoffe</option>
+								<option value='CR'>Acrylamid</option>
+								<option value='CS'>Kohlensäure (überschüssig) ?</option>
+								<option value='CT'>Kohlensäure (gesamt)</option>
+								<option value='CU'>DOC (Disolved Organic Carbon)</option>
+								<option value='CV'>Chlorit</option>
+								<option value='CW'>Chlordioxid</option>
+								<option value='CX'>Glyphosat</option>
+								<option value='CY'>chloroform</option>
+								<option value='CZ'>CO2 frei </option>
+						 	 </select>
+						 	 <br><br>
+							<button type="button" onclick="drawGID()" style="width:750px; hight:100px; background-color:#4071b4; color:white; font-size: 16px; padding: 8px 22px;" align="center">Städte vergleichen</button>
+						</form>
+			              <div id="chart_div"> </div>
+			               <br><br>
+			               Weitere Informationen zu den Parametern sind auf<a href="info.html"> der Informationsseite </a>zu finden
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      </section>
+      
+    
+    <!--************************************
+			Feature Products End
+	*************************************-->
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+
+<!--************************************
+				Footer Start
+		*************************************-->
+		<footer id="footer" class="tg-haslayout">
+			<div class="four-columns haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+							<div class="col aboutus">
+								<strong class="logo">
+									<a href="index.html"><img src="images/logo22.png" alt="image description"></a>
+								</strong>
+								<div class="tg-description">
+									<p>
+									<!-- Bei der "Drinking Water Quality Group" <br>handelt es sich um ein studentisches Gruppenprojekt,
+									dass im Rhamen des Masterseminars "Wissensrepräsentation und Wissensmanagement" entstanden ist.
+									<!--Für die "Drinking Water Quality Group" ist die Qualität des Trinkwasser besonders wichtig und
+									möchte dies in Form von Graphiken, Karten und informativen Texten näher bringen.-->
+									</p>
+								</div>
+								<!--<ul class="tg-socialicon">
+									<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul> -->
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+                          <div class="col tg-recent-post">
+                         <!-- <div class="tg-heading-border">
+                            <!-- <h3>Über uns</h3> -->
+                       <!--  </div> -->
+                         <div class="tg-description">
+									<p>
+									Bei der "Drinking Water Quality Group" <br>handelt es sich um ein studentisches <br>Gruppenprojekt,
+									dass im Rhamen des <br>Masterseminars "Wissensrepräsentation <br>und Wissensmanagement" entstanden ist.
+									</p>
+								</div>
+                          </div>
+                           </div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+            <div class="col tg-recent-post">
+              <div class="tg-heading-border">
+                <h3>Über uns</h3>
+              </div>
+              <ul>
+                <li> <a href="team.html">
+                  <p>Unser Team</p>
+                  </a> </li>
+                <li> <a href="team.html#projekt">
+                  <p>Das Projekt</p>
+                  </a> </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+            <div class="col tg-tags">
+              <div class="tg-heading-border">
+                <h3>Lizenz & Recht</h3>
+              </div>
+              <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+				<li><a href="lizenzen.html">Lizenzen</a></li>
+				<li><a href="daten.html">Daten</a></li>
+              </ul>
+            </div>
+          </div>
+          
+					<!--	<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+							<div class="col tg-flicker">
+								<div class="tg-heading-border">
+									<h3>Flickr Stream</h3>
+								</div>
+								<ul>
+									<li>
+										<a href="images/thumbs/thumb-04.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/img0123.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-05.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/img1.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-06.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/1.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-07.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/2.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-08.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/3.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-09.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/4.jpg" alt="image description"></a>
+									</li>
+								</ul>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			<div class="bottom-bar haslayout">
+				<div class="container">
+					<div class="copyright"><p>Copyright 2016 &copy; <a href ="http://freecssthemes.com/" target="_blank" title="Click to get this template!"/>FreeCssThemes</a> | All Rights Reserved</p></div>
+				</div>
+			</div>
+		</footer>
+		<!--************************************
+				Footer End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	
+	<script src="js/vendor/jquery-pulgin.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/prettyPhoto.js"></script>
+	<script src="js/isotope.pkgd.js"></script>
+	<script src="js/hoverdir.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/appear.js"></script>
+	<script src="js/countTo.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/nicescroll.js"></script>
+	<script src="js/handlebars.min.js"></script>
+	<script src="js/gmap3.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

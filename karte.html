@@ -1,0 +1,2495 @@
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&Uuml;bersichtskarte</title>
+    <meta name="description" content="Trinkwasserqualität in NRW">
+     <meta name="author" content="Entezari, Kasakowskij, Mariami, Weber">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/transitions.css">
+	<link rel="stylesheet" href="css/color.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="icon" href="images\tropfen.png" />
+	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	
+	
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/Control.OSMGeocoder.css">
+        <style>
+        #map {
+            width: 1050px;
+            height: 450px;
+            margin: auto;
+            
+        }
+        #map, table, th, tr, td{
+			border: none;
+			
+			
+			
+			}
+			
+        table {
+			width: 120px;
+			height: 30px;
+			opacity = 0.5;
+		}
+		
+        
+        @media screen and (max-width: 720px) {
+			#map {
+				width: 500px;
+				height: 300px;
+				margin: auto;
+			}
+		}
+		
+		#testi, table, th, td, tr{border:none;}
+        
+        </style>
+	
+	
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="preloader-bg">
+		<div class="preloader">
+			<div class="preloader-top">
+				<div class="preloader-top-sun">
+					<div class="preloader-top-sun-bg"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-0"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-45"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-90"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-135"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-180"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-225"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-270"></div>
+					<div class="preloader-top-sun-line preloader-top-sun-line-315"></div>
+				</div>
+			</div>
+			<div class="preloader-bottom">
+				<div class="preloader-bottom-line preloader-bottom-line-lg"></div>
+				<div class="preloader-bottom-line preloader-bottom-line-md"></div>
+				<div class="preloader-bottom-line preloader-bottom-line-sm"></div>
+				<div class="preloader-bottom-line preloader-bottom-line-xs"></div>
+			</div>
+		</div>
+	</div>
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="wrapper" class="tg-haslayout">
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="header" class="tg-header tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<strong class="logo">
+							<a href="index.html"> <img src="images/logo22.png" alt="image description"></a>
+						</strong>
+						<div class="tg-rightarea">
+							<nav id="tg-nav" class="tg-nav">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<!--<ul class="navbar-right">
+										<li ><a href="index.html">Home</a>
+										
+									</li>
+									<li class="active"><a href="karte.html">&uuml;bersichtskarte</a></li>
+									<li><a href="vergleich.html">Vergleichen</a></li>
+									<li> <a href="info.html">INFO's</a>
+				
+									</li>
+									
+									<li>
+										<a href="#"><span>pages</span><i class="fa fa-navicon"></i></a>
+										<ul>
+											<li><a href="team.html">team</a></li>
+											<li><a href="contactus.html">contact us</a></li>
+										</ul>
+									</li>!-->
+									
+									<ul class="navbar-right">
+										<li ><a href="index.html">Trinkwasserqualität</a>
+										
+									</li>
+									<li class="active"><a href="karte.html">&uuml;bersichtskarte NRW</a></li>
+									<li><a href="#">Trinkwasserwerte</a>
+									 <ul>
+											<li><a href="stadt.html">Stadtauswahl</a></li>
+											<li><a href="vergleich2.html">Städtevergleich</a></li>
+										</ul>
+									</li>
+                              <li>
+                                 <a href="#">Eigenschaften</a>
+                                 <ul>
+                                    <li><a href="info.html">Inhaltsstoffe</a></li>
+                                    <li><a href="grenzwerte.html">Grenzwerte</a></li>
+                                 </ul>
+                              </li>
+								
+									<li> <a href="#">About</a>
+				                         <ul>
+											<li><a href="team.html">Das Team</a></li>
+											<li><a href="impressum.html">Impressum</a></li>
+                        	    			<li><a href="lizenzen.html">Lizenzen</a></li>
+                        		    		<li><a href="daten.html">Daten</a></li>
+										</ul>
+									</li>
+                              	
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--************************************
+				Header End
+		*************************************-->
+		<!--************************************
+				Banner Start
+		*************************************-->
+		<div class="tg-main-section tg-banner tg-haslayout parallax-window" data-parallax="scroll" data-bleed="100" data-speed="0.2" data-image-src="images/slider/img1.jpg">
+			<div class="container">
+			<ul class="tg-breadcrumb">
+				<li>Karte</li>
+				<li>NRW</li>
+			</ul>
+			</div>
+		</div>
+		<!--************************************
+				Banner End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="main" class="tg-haslayout">
+			<!--************************************
+					Save The Planet Start
+			*************************************-->
+			<section class="tg-main-section tg-haslayout bg-dark">
+			  <div class="container">
+				<div class="row">
+				  <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+					<div class="tg-section-head">
+					  <div class="tg-heading">
+						<h2>NRW-Karte Trinkwasserwerte</h2>
+					  </div>
+					  <div class="tg-description">
+						<p>
+						Auf der folgenden Karte werden die wichtigsten Trinkwasser-Werte in NRW für Kreise und Kreisfreie Städte dargestellt.
+						
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			<!--</section>
+			<!--************************************
+					Save The Planet End
+			*************************************-->
+			
+		<!--**************** ZUSATZ ***************** -->
+		
+		<div class="col-xs-12">
+					<div class="tg-portfolio tg-haslayout">
+					  <div class="tg-portfolio-head tg-haslayout">
+						<nav class="tg-nav">
+						  <div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+						  </div>
+						  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+							<ul id="tg-filterbale-nav" class="option-set">
+							  <li class="current-menu-item"><a data-filter=".wasserhärte" href="#" onclick="wasserhärte()">Wasserhärte</a></li>
+							  <li><a data-filter=".ph" href="#" onclick="ph()">Ph-Wert</a></li>
+							  <li><a data-filter=".calcium" href="#" onclick="calcium()">Calcium</a></li>
+							  <li><a data-filter=".natrium" href="#" onclick="natrium()">Natrium</a></li>
+							  <li><a data-filter=".chlorid" href="#" onclick="chlorid()">Chlorid</a></li>
+							  <li><a data-filter=".eisen" href="#" onclick="eisen()">Eisen</a></li>
+							  <li><a data-filter=".kalium" href="#" onclick="kalium()">Kalium</a></li>
+							  <li><a data-filter=".magnesium" href="#" onclick="magnesium()">Magnesium</a></li>
+							  <li><a data-filter=".phosphat" href="#" onclick="phosphat()">Phosphat</a></li>
+							  
+							  <li><a data-filter=".mangan" href="#" onclick="mangan()">Mangan</a></li>
+							  <li><a data-filter=".ammonium" href="#" onclick="ammonium()">Ammonium</a></li>
+							</ul>
+						  </div>
+						</nav>
+					  </div>
+				
+			
+		
+		
+		 <!--**************** Zusatz ENDE ************ -->
+					  
+<!-----            !!!!!!!!  Hier kommt die Übersichtskarte hin  !!!!!!!!              ----->
+
+
+<!--  <html>  !-->
+<!-- *******************************************
+            WASSER-HÄRTE MAP START
+     ******************************************* !-->
+    <!-- <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/Control.OSMGeocoder.css">
+        <style>
+        #map {
+            width: 1150px;
+            height: 535px;
+        }
+        
+        </style>
+        <title></title>
+    </head>
+    <body> !-->
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/Control.OSMGeocoder.js"></script>
+        <script src="data/Phosphat0.js"></script>
+        <script src="data/Magnesium1.js"></script>
+        <script src="data/Kalium2.js"></script>
+        <script src="data/Eisen3.js"></script>
+        <script src="data/Chlorid4.js"></script>
+        <script src="data/Natrium5.js"></script>
+        <script src="data/Calcium6.js"></script>
+        <script src="data/PhWert7.js"></script>
+        <script src="data/Wasserhrte8.js"></script>
+        <script src="data/Ammonium0.js"></script>
+        <script src="data/Mangan0.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+            highlightLayer.openPopup();
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:10, minZoom:1
+        }).fitBounds([[50.2573409408,3.56202746172],[52.5768584471,11.5912274647]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        var bounds_group = new L.featureGroup([]);
+        var basemap0 = L.tileLayer('http://a.tile.stamen.com/terrain/{z}/{x}/{y}.png', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash;Map data: &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 10
+        });
+        basemap0.addTo(map);
+        function setBounds() {
+        }
+        function pop_Phosphat0(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td scope="row" style="border:none; border-bottom:solid blue;"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom: solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Phosphat</b></td>\
+                        <td style="border:none;">' + (feature.properties['Phosphat'] !== null ? Autolinker.link(String(feature.properties['Phosphat'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Phosphat0_0(feature) {
+            if (feature.properties['Phosphat'] >= 0.010000 && feature.properties['Phosphat'] <= 0.116000 ) {
+                return {
+                pane: 'pane_Phosphat0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(255,255,212,0.7)',
+            }
+            }
+            if (feature.properties['Phosphat'] >= 0.116000 && feature.properties['Phosphat'] <= 0.206000 ) {
+                return {
+                pane: 'pane_Phosphat0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(254,217,142,0.7)',
+            }
+            }
+            if (feature.properties['Phosphat'] >= 0.206000 && feature.properties['Phosphat'] <= 0.504000 ) {
+                return {
+                pane: 'pane_Phosphat0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(254,153,41,0.7)',
+            }
+            }
+            if (feature.properties['Phosphat'] >= 0.504000 && feature.properties['Phosphat'] <= 1.084000 ) {
+                return {
+                pane: 'pane_Phosphat0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(217,95,14,0.7)',
+            }
+            }
+            if (feature.properties['Phosphat'] >= 1.084000 && feature.properties['Phosphat'] <= 2.250000 ) {
+                return {
+                pane: 'pane_Phosphat0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(153,52,4,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_Phosphat0');
+        map.getPane('pane_Phosphat0').style.zIndex = 400;
+        map.getPane('pane_Phosphat0').style['mix-blend-mode'] = 'normal';
+    var layer_Phosphat0 = new L.geoJson(json_Phosphat0, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Phosphat0',
+        onEachFeature: pop_Phosphat0,
+        style: style_Phosphat0_0,
+    });
+        bounds_group.addLayer(layer_Phosphat0);
+        function pop_Magnesium1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Magnesium</b></td>\
+                        <td style="border:none;">' + (feature.properties['Magnesium'] !== null ? Autolinker.link(String(feature.properties['Magnesium'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Magnesium1_0(feature) {
+            if (feature.properties['Magnesium'] >= 3.000000 && feature.properties['Magnesium'] <= 5.548000 ) {
+                return {
+                pane: 'pane_Magnesium1',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(250,250,250,0.7)',
+            }
+            }
+            if (feature.properties['Magnesium'] >= 5.548000 && feature.properties['Magnesium'] <= 6.168000 ) {
+                return {
+                pane: 'pane_Magnesium1',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(189,189,189,0.7)',
+            }
+            }
+            if (feature.properties['Magnesium'] >= 6.168000 && feature.properties['Magnesium'] <= 7.448000 ) {
+                return {
+                pane: 'pane_Magnesium1',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(128,128,128,0.7)',
+            }
+            }
+            if (feature.properties['Magnesium'] >= 7.448000 && feature.properties['Magnesium'] <= 11.952000 ) {
+                return {
+                pane: 'pane_Magnesium1',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(66,66,66,0.7)',
+            }
+            }
+            if (feature.properties['Magnesium'] >= 11.952000 && feature.properties['Magnesium'] <= 22.700000 ) {
+                return {
+                pane: 'pane_Magnesium1',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(5,5,5,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_Magnesium1');
+        map.getPane('pane_Magnesium1').style.zIndex = 401;
+        map.getPane('pane_Magnesium1').style['mix-blend-mode'] = 'normal';
+    var layer_Magnesium1 = new L.geoJson(json_Magnesium1, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Magnesium1',
+        onEachFeature: pop_Magnesium1,
+        style: style_Magnesium1_0,
+    });
+        bounds_group.addLayer(layer_Magnesium1);
+        function pop_Kalium2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Krei'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Kalium</b></td>\
+                        <td style="border:none;">' + (feature.properties['Kalium'] !== null ? Autolinker.link(String(feature.properties['Kalium'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Kalium2_0(feature) {
+            if (feature.properties['Kalium'] >= 1.280000 && feature.properties['Kalium'] <= 1.900000 ) {
+                return {
+                pane: 'pane_Kalium2',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(254,240,217,0.7)',
+            }
+            }
+            if (feature.properties['Kalium'] >= 1.900000 && feature.properties['Kalium'] <= 2.600000 ) {
+                return {
+                pane: 'pane_Kalium2',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(253,204,138,0.7)',
+            }
+            }
+            if (feature.properties['Kalium'] >= 2.600000 && feature.properties['Kalium'] <= 3.200000 ) {
+                return {
+                pane: 'pane_Kalium2',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(252,141,89,0.7)',
+            }
+            }
+            if (feature.properties['Kalium'] >= 3.200000 && feature.properties['Kalium'] <= 4.000000 ) {
+                return {
+                pane: 'pane_Kalium2',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(227,74,51,0.7)',
+            }
+            }
+            if (feature.properties['Kalium'] >= 4.000000 && feature.properties['Kalium'] <= 6.400000 ) {
+                return {
+                pane: 'pane_Kalium2',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(179,0,0,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_Kalium2');
+        map.getPane('pane_Kalium2').style.zIndex = 402;
+        map.getPane('pane_Kalium2').style['mix-blend-mode'] = 'normal';
+    var layer_Kalium2 = new L.geoJson(json_Kalium2, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Kalium2',
+        onEachFeature: pop_Kalium2,
+        style: style_Kalium2_0,
+    });
+        bounds_group.addLayer(layer_Kalium2);
+        function pop_Eisen3(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Eisen</b></td>\
+                        <td style="border:none;">' + (feature.properties['Eisen'] !== null ? Autolinker.link(String(feature.properties['Eisen'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Eisen3_0(feature) {
+            if (feature.properties['Eisen'] >= 0.000000 && feature.properties['Eisen'] <= 0.010000 ) {
+                return {
+                pane: 'pane_Eisen3',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(255,255,204,0.7)',
+            }
+            }
+            if (feature.properties['Eisen'] >= 0.010000 && feature.properties['Eisen'] <= 0.020000 ) {
+                return {
+                pane: 'pane_Eisen3',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(194,230,153,0.7)',
+            }
+            }
+            if (feature.properties['Eisen'] >= 0.020000 && feature.properties['Eisen'] <= 0.060000 ) {
+                return {
+                pane: 'pane_Eisen3',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(120,198,121,0.7)',
+            }
+            }
+            if (feature.properties['Eisen'] >= 0.060000 && feature.properties['Eisen'] <= 0.2 ) {
+                return {
+                pane: 'pane_Eisen3',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(49,163,84,0.7)',
+            }
+            }
+            
+        }
+        map.createPane('pane_Eisen3');
+        map.getPane('pane_Eisen3').style.zIndex = 403;
+        map.getPane('pane_Eisen3').style['mix-blend-mode'] = 'normal';
+    var layer_Eisen3 = new L.geoJson(json_Eisen3, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Eisen3',
+        onEachFeature: pop_Eisen3,
+        style: style_Eisen3_0,
+    });
+        bounds_group.addLayer(layer_Eisen3);
+        function pop_Chlorid4(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Chlorid</b></td>\
+                        <td style="border:none;">' + (feature.properties['Chlorid'] !== null ? Autolinker.link(String(feature.properties['Chlorid'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Chlorid4_0(feature) {
+            if (feature.properties['Chlorid'] >= 6.900000 && feature.properties['Chlorid'] <= 21.830000 ) {
+                return {
+                pane: 'pane_Chlorid4',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(254,235,226,0.7)',
+            }
+            }
+            if (feature.properties['Chlorid'] >= 21.830000 && feature.properties['Chlorid'] <= 28.780000 ) {
+                return {
+                pane: 'pane_Chlorid4',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(251,180,185,0.7)',
+            }
+            }
+            if (feature.properties['Chlorid'] >= 28.780000 && feature.properties['Chlorid'] <= 36.000000 ) {
+                return {
+                pane: 'pane_Chlorid4',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(247,104,161,0.7)',
+            }
+            }
+            if (feature.properties['Chlorid'] >= 36.000000 && feature.properties['Chlorid'] <= 44.650000 ) {
+                return {
+                pane: 'pane_Chlorid4',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(197,27,138,0.7)',
+            }
+            }
+            if (feature.properties['Chlorid'] >= 44.650000 && feature.properties['Chlorid'] <= 82.740000 ) {
+                return {
+                pane: 'pane_Chlorid4',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(122,1,119,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_Chlorid4');
+        map.getPane('pane_Chlorid4').style.zIndex = 404;
+        map.getPane('pane_Chlorid4').style['mix-blend-mode'] = 'normal';
+    var layer_Chlorid4 = new L.geoJson(json_Chlorid4, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Chlorid4',
+        onEachFeature: pop_Chlorid4,
+        style: style_Chlorid4_0,
+    });
+        bounds_group.addLayer(layer_Chlorid4);
+        function pop_Natrium5(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                        
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Natrium</b></td>\
+                        <td style="border:none;">' + (feature.properties['Natrium'] !== null ? Autolinker.link(String(feature.properties['Natrium'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Natrium5_0(feature) {
+            if (feature.properties['Natrium'] >= 6.100000 && feature.properties['Natrium'] <= 14.130000 ) {
+                return {
+                pane: 'pane_Natrium5',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(240,249,232,1.0)',
+            }
+            }
+            if (feature.properties['Natrium'] >= 14.130000 && feature.properties['Natrium'] <= 19.330000 ) {
+                return {
+                pane: 'pane_Natrium5',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(186,228,188,1.0)',
+            }
+            }
+            if (feature.properties['Natrium'] >= 19.330000 && feature.properties['Natrium'] <= 25.950000 ) {
+                return {
+                pane: 'pane_Natrium5',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(123,204,196,1.0)',
+            }
+            }
+            if (feature.properties['Natrium'] >= 25.950000 && feature.properties['Natrium'] <= 30.200000 ) {
+                return {
+                pane: 'pane_Natrium5',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(67,162,202,1.0)',
+            }
+            }
+            if (feature.properties['Natrium'] >= 30.200000 && feature.properties['Natrium'] <= 47.300000 ) {
+                return {
+                pane: 'pane_Natrium5',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(8,104,172,1.0)',
+            }
+            }
+        }
+        map.createPane('pane_Natrium5');
+        map.getPane('pane_Natrium5').style.zIndex = 405;
+        map.getPane('pane_Natrium5').style['mix-blend-mode'] = 'normal';
+    var layer_Natrium5 = new L.geoJson(json_Natrium5, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Natrium5',
+        onEachFeature: pop_Natrium5,
+        style: style_Natrium5_0,
+    });
+        bounds_group.addLayer(layer_Natrium5);
+        
+        
+        function pop_Calcium6(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Calcium</b></td>\
+                        <td style="border:none;">' + (feature.properties['Calcium'] !== null ? Autolinker.link(String(feature.properties['Calcium'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Calcium6_0(feature) {
+            if (feature.properties['Calcium'] >= 20.530000 && feature.properties['Calcium'] <= 42.000000 ) {
+                return {
+                pane: 'pane_Calcium6',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(166,97,26,0.7)',
+            }
+            }
+            if (feature.properties['Calcium'] >= 42.000000 && feature.properties['Calcium'] <= 46.670000 ) {
+                return {
+                pane: 'pane_Calcium6',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(223,194,125,0.7)',
+            }
+            }
+            if (feature.properties['Calcium'] >= 46.670000 && feature.properties['Calcium'] <= 62.520000 ) {
+                return {
+                pane: 'pane_Calcium6',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(245,245,245,0.7)',
+            }
+            }
+            if (feature.properties['Calcium'] >= 62.520000 && feature.properties['Calcium'] <= 84.100000 ) {
+                return {
+                pane: 'pane_Calcium6',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(128,205,193,0.7)',
+            }
+            }
+            if (feature.properties['Calcium'] >= 84.100000 && feature.properties['Calcium'] <= 131.330000 ) {
+                return {
+                pane: 'pane_Calcium6',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(1,133,113,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_Calcium6');
+        map.getPane('pane_Calcium6').style.zIndex = 406;
+        map.getPane('pane_Calcium6').style['mix-blend-mode'] = 'normal';
+    var layer_Calcium6 = new L.geoJson(json_Calcium6, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Calcium6',
+        onEachFeature: pop_Calcium6,
+        style: style_Calcium6_0,
+    });
+        bounds_group.addLayer(layer_Calcium6);
+        
+        
+        
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        function pop_Mangan0(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Krei'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Mangan</b></td>\
+                        <td style="border:none;">' + (feature.properties['Mangan'] !== null ? Autolinker.link(String(feature.properties['Mangan'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Mangan0_0(feature) {
+            if (feature.properties['Mangan'] >= 0.000333 && feature.properties['Mangan'] <= 0.002000 ) {
+                return {
+                pane: 'pane_Mangan0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(241,238,246,0.7)',
+            }
+            }
+            if (feature.properties['Mangan'] >= 0.002000 && feature.properties['Mangan'] <= 0.004000 ) {
+                return {
+                pane: 'pane_Mangan0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(215,181,216,0.7)',
+            }
+            }
+            if (feature.properties['Mangan'] >= 0.004000 && feature.properties['Mangan'] <= 0.005000 ) {
+                return {
+                pane: 'pane_Mangan0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(223,101,176,0.7)',
+            }
+            }
+            if (feature.properties['Mangan'] >= 0.005000 && feature.properties['Mangan'] <= 0.006314 ) {
+                return {
+                pane: 'pane_Mangan0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(221,28,119,0.7)',
+            }
+            }
+            if (feature.properties['Mangan'] >= 0.006314 && feature.properties['Mangan'] <= 0.104200 ) {
+                return {
+                pane: 'pane_Mangan0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(152,0,67,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_Mangan0');
+        map.getPane('pane_Mangan0').style.zIndex = 400;
+        map.getPane('pane_Mangan0').style['mix-blend-mode'] = 'normal';
+    var layer_Mangan0 = new L.geoJson(json_Mangan0, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Mangan0',
+        onEachFeature: pop_Mangan0,
+        style: style_Mangan0_0,
+    });
+        bounds_group.addLayer(layer_Mangan0);
+        
+        
+        
+        
+        function pop_Ammonium0(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Krei'] !== null ? Autolinker.link(String(feature.properties['Stadt/Krei'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Ammonium</b></td>\
+                        <td style="border:none;">' + (feature.properties['Ammonium'] !== null ? Autolinker.link(String(feature.properties['Ammonium'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Ammonium0_0(feature) {
+            if (feature.properties['Ammonium'] >= 0.000000 && feature.properties['Ammonium'] <= 0.020000 ) {
+                return {
+                pane: 'pane_Ammonium0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(237,248,251,0.7)',
+            }
+            }
+            if (feature.properties['Ammonium'] >= 0.020000 && feature.properties['Ammonium'] <= 0.040000 ) {
+                return {
+                pane: 'pane_Ammonium0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(179,205,227,0.7)',
+            }
+            }
+            if (feature.properties['Ammonium'] >= 0.040000 && feature.properties['Ammonium'] <= 0.060000 ) {
+                return {
+                pane: 'pane_Ammonium0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(140,150,198,0.7)',
+            }
+            }
+            if (feature.properties['Ammonium'] >= 0.060000 && feature.properties['Ammonium'] <= 0.080000 ) {
+                return {
+                pane: 'pane_Ammonium0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(136,86,167,0.7)',
+            }
+            }
+            if (feature.properties['Ammonium'] >= 0.080000 && feature.properties['Ammonium'] <= 0.100000 ) {
+                return {
+                pane: 'pane_Ammonium0',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(129,15,124,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_Ammonium0');
+        map.getPane('pane_Ammonium0').style.zIndex = 400;
+        map.getPane('pane_Ammonium0').style['mix-blend-mode'] = 'normal';
+    var layer_Ammonium0 = new L.geoJson(json_Ammonium0, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Ammonium0',
+        onEachFeature: pop_Ammonium0,
+        style: style_Ammonium0_0,
+    });
+        bounds_group.addLayer(layer_Ammonium0);
+        
+        
+        
+        
+        ////////////////////////////////////////7
+        
+        function pop_PhWert7(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>pH-Wert</b></td>\
+                        <td style="border:none;">' + (feature.properties['pH-Wert'] !== null ? Autolinker.link(String(feature.properties['pH-Wert'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent);
+        }
+
+        function style_PhWert7_0(feature) {
+            if (feature.properties['pH-Wert'] >= 7.240000 && feature.properties['pH-Wert'] <= 7.564000 ) {
+                return {
+                pane: 'pane_PhWert7',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(237,248,251,0.7)',
+            }
+            }
+            if (feature.properties['pH-Wert'] >= 7.564000 && feature.properties['pH-Wert'] <= 7.726000 ) {
+                return {
+                pane: 'pane_PhWert7',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(178,226,226,0.7)',
+            }
+            }
+            if (feature.properties['pH-Wert'] >= 7.726000 && feature.properties['pH-Wert'] <= 7.848000 ) {
+                return {
+                pane: 'pane_PhWert7',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(102,194,164,0.7)',
+            }
+            }
+            if (feature.properties['pH-Wert'] >= 7.848000 && feature.properties['pH-Wert'] <= 8.070000 ) {
+                return {
+                pane: 'pane_PhWert7',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(44,162,95,0.7)',
+            }
+            }
+            if (feature.properties['pH-Wert'] >= 8.070000 && feature.properties['pH-Wert'] <= 9.430000 ) {
+                return {
+                pane: 'pane_PhWert7',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(0,109,44,0.7)',
+            }
+            }
+        }
+        map.createPane('pane_PhWert7');
+        map.getPane('pane_PhWert7').style.zIndex = 407;
+        map.getPane('pane_PhWert7').style['mix-blend-mode'] = 'normal';
+    var layer_PhWert7 = new L.geoJson(json_PhWert7, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_PhWert7',
+        onEachFeature: pop_PhWert7,
+        style: style_PhWert7_0,
+        
+    });
+        bounds_group.addLayer(layer_PhWert7);
+        
+        
+        
+        
+        
+        
+        
+        function pop_Wasserhrte8(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td style="border:none; border-bottom:solid blue;" scope="row"><b>Stadt/Kreis</b></td>\
+                        <td style="border:none; border-bottom:solid blue;">' + (feature.properties['Stadt/Kreis'] !== null ? Autolinker.link(String(feature.properties['Stadt/Kreis'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td style="border:none;" scope="row"><b>Härtegrad (dh°)</b></td>\
+                        <td style="border:none;">' + (feature.properties['Härtegrad '] !== null ? Autolinker.link(String(feature.properties['Härtegrad '])) : '') + '</td>\
+                    </tr>\
+                </table>';
+                
+       
+                
+            layer.bindPopup(popupContent);
+        }
+
+        function style_Wasserhrte8_0(feature) {
+            switch(feature.properties['q2wHide_Härteber_1'].toString()) {
+                case '1':
+                    return {
+                pane: 'pane_Wasserhrte8',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(247,251,255,0.7)',
+            }
+                    break;
+                case '2':
+                    return {
+                pane: 'pane_Wasserhrte8',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(176,210,232,0.7)',
+            }
+                    break;
+                case '3':
+                    return {
+                pane: 'pane_Wasserhrte8',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(62,142,196,0.7)',
+            }
+                    break;
+                case '4':
+                    return {
+				pane: 'pane_Wasserhrte8',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(62,142,196,0.7)',
+						
+						
+						
+             /**   pane: 'pane_Wasserhrte8',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.7)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fillOpacity: 1,
+                fillColor: 'rgba(8,48,107,0.7)',**/
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Wasserhrte8');
+        map.getPane('pane_Wasserhrte8').style.zIndex = 408;
+        map.getPane('pane_Wasserhrte8').style['mix-blend-mode'] = 'normal';
+    var layer_Wasserhrte8 = new L.geoJson(json_Wasserhrte8, {
+        attribution: '<a href=""></a>',
+        pane: 'pane_Wasserhrte8',
+        onEachFeature: pop_Wasserhrte8,
+        style: style_Wasserhrte8_0,
+    });
+        bounds_group.addLayer(layer_Wasserhrte8);
+        map.addLayer(layer_Wasserhrte8);
+        var osmGeocoder = new L.Control.OSMGeocoder({
+            collapsed: false,
+            position: 'topright',
+            text: 'Search',
+        });
+        osmGeocoder.addTo(map);
+      /*  var baseMaps = {};
+        ///if (kennung == 1){};
+        L.control.layers(baseMaps,{'Wasserhärte<br /><table><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Weich0.png" /></td><td>Weich</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Mittel1.png" /></td><td>Mittel</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Hart2.png" /></td><td>Hart</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_SehrHart3.png" /></td><td>Sehr Hart</td></tr></table>': layer_Wasserhrte8,
+			'Ph-Wert<br /><table><tr><td style="text-align: center;"><img src="legend/PhWert7_7247560.png" /></td><td> 7.24 - 7.56 </td></tr><tr><td style="text-align: center;"><img src="legend/PhWert7_7567731.png" /></td><td> 7.56 - 7.73 </td></tr><tr><td style="text-align: center;"><img src="legend/PhWert7_7737852.png" /></td><td> 7.73 - 7.85 </td></tr><tr><td style="text-align: center;"><img src="legend/PhWert7_7858073.png" /></td><td> 7.85 - 8.07 </td></tr><tr><td style="text-align: center;"><img src="legend/PhWert7_8079434.png" /></td><td> 8.07 - 9.43 </td></tr></table>': layer_PhWert7,
+			'Calcium<br /><table><tr><td style="text-align: center;"><img src="legend/Calcium6_21420.png" /></td><td> 21 - 42 </td></tr><tr><td style="text-align: center;"><img src="legend/Calcium6_42471.png" /></td><td> 42 - 47 </td></tr><tr><td style="text-align: center;"><img src="legend/Calcium6_47632.png" /></td><td> 47 - 63 </td></tr><tr><td style="text-align: center;"><img src="legend/Calcium6_63843.png" /></td><td> 63 - 84 </td></tr><tr><td style="text-align: center;"><img src="legend/Calcium6_841314.png" /></td><td> 84 - 131 </td></tr></table>': layer_Calcium6,
+			'Natrium<br /><table><tr><td style="text-align: center;"><img src="legend/Natrium5_611410.png" /></td><td> 6.1 - 14.1 </td></tr><tr><td style="text-align: center;"><img src="legend/Natrium5_1411931.png" /></td><td> 14.1 - 19.3 </td></tr><tr><td style="text-align: center;"><img src="legend/Natrium5_1932592.png" /></td><td> 19.3 - 25.9 </td></tr><tr><td style="text-align: center;"><img src="legend/Natrium5_2593023.png" /></td><td> 25.9 - 30.2 </td></tr><tr><td style="text-align: center;"><img src="legend/Natrium5_3024734.png" /></td><td> 30.2 - 47.3 </td></tr></table>': layer_Natrium5,
+			'Chlorid<br /><table><tr><td style="text-align: center;"><img src="legend/Chlorid4_692180.png" /></td><td> 6.9 - 21.8 </td></tr><tr><td style="text-align: center;"><img src="legend/Chlorid4_2182881.png" /></td><td> 21.8 - 28.8 </td></tr><tr><td style="text-align: center;"><img src="legend/Chlorid4_2883602.png" /></td><td> 28.8 - 36.0 </td></tr><tr><td style="text-align: center;"><img src="legend/Chlorid4_3604463.png" /></td><td> 36.0 - 44.6 </td></tr><tr><td style="text-align: center;"><img src="legend/Chlorid4_4468274.png" /></td><td> 44.6 - 82.7 </td></tr></table>': layer_Chlorid4,
+			'Eisen<br /><table><tr><td style="text-align: center;"><img src="legend/Eisen3_0000010.png" /></td><td> 0.00 - 0.01</td></tr><tr><td style="text-align: center;"><img src="legend/Eisen3_0010021.png" /></td><td> 0.01 - 0.02 </td></tr><tr><td style="text-align: center;"><img src="legend/Eisen3_0020062.png" /></td><td> 0.02 - 0.06 </td></tr><tr><td style="text-align: center;"><img src="legend/Eisen3_0060713.png" /></td><td> 0.06 - 0.71</td></tr><tr><td style="text-align: center;"><img src="legend/Eisen3_071154.png" /></td><td> 0.71 - 1.5</td></tr></table>': layer_Eisen3,
+			'Kalium<br /><table><tr><td style="text-align: center;"><img src="legend/Kalium2_1281900.png" /></td><td> 1.28 - 1.90 </td></tr><tr><td style="text-align: center;"><img src="legend/Kalium2_1902601.png" /></td><td> 1.90 - 2.60 </td></tr><tr><td style="text-align: center;"><img src="legend/Kalium2_2603202.png" /></td><td> 2.60 - 3.20 </td></tr><tr><td style="text-align: center;"><img src="legend/Kalium2_3204003.png" /></td><td> 3.20 - 4.00 </td></tr><tr><td style="text-align: center;"><img src="legend/Kalium2_4006404.png" /></td><td> 4.00 - 6.40 </td></tr></table>': layer_Kalium2,
+			'Magnesium<br /><table><tr><td style="text-align: center;"><img src="legend/Magnesium1_3005550.png" /></td><td> 3.00 - 5.55 </td></tr><tr><td style="text-align: center;"><img src="legend/Magnesium1_5556171.png" /></td><td> 5.55 - 6.17 </td></tr><tr><td style="text-align: center;"><img src="legend/Magnesium1_6177452.png" /></td><td> 6.17 - 7.45 </td></tr><tr><td style="text-align: center;"><img src="legend/Magnesium1_74511953.png" /></td><td> 7.45 - 11.95 </td></tr><tr><td style="text-align: center;"><img src="legend/Magnesium1_119522704.png" /></td><td> 11.95 - 22.70 </td></tr></table>': layer_Magnesium1,
+			'Phosphat<br /><table><tr><td style="text-align: center;"><img src="legend/Phosphat0_001001160.png" /></td><td> 0.010 - 0.116 </td></tr><tr><td style="text-align: center;"><img src="legend/Phosphat0_011602061.png" /></td><td> 0.116 - 0.206 </td></tr><tr><td style="text-align: center;"><img src="legend/Phosphat0_020605042.png" /></td><td> 0.206 - 0.504 </td></tr><tr><td style="text-align: center;"><img src="legend/Phosphat0_050410843.png" /></td><td> 0.504 - 1.084 </td></tr><tr><td style="text-align: center;"><img src="legend/Phosphat0_108422504.png" /></td><td> 1.084 - 2.250 </td></tr></table>': layer_Phosphat0,}).addTo(map);*/
+			
+        setBounds();
+        
+        '<div id="testi">'
+        var testeriono ={};
+        var q = L.control.layers(testeriono,{'<b>Wasserhärte</b><br /><table><tr><td style="text-align: center; border:none;"><img src="legend/Wasserhrte8_Weich0.png" /></td><td style="border:none;">Weich</td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Wasserhrte8_Mittel1.png" /></td><td style="border:none;">Mittel</td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Wasserhrte8_Hart2.png" /></td><td style="border:none;">Hart</td></tr></table>': layer_Wasserhrte8,},{collapsed:false, position:'bottomright'});
+        var l = L.control.layers(testeriono,{'<b>Ph-Wert</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/PhWert7_7247560.png" /></td><td style="border:none;"> 7.24 - 7.56 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/PhWert7_7567731.png" /></td><td style="border:none;"> 7.56 - 7.73 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/PhWert7_7737852.png" /></td><td style="border:none;"> 7.73 - 7.85 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/PhWert7_7858073.png" /></td><td style="border:none;"> 7.85 - 8.07 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/PhWert7_8079434.png" /></td><td style="border:none;"> 8.07 - 9.43 </td></tr></table>': layer_PhWert7,},{collapsed:false, position:'bottomright'});
+        var m = L.control.layers(testeriono,{'<b>Calcium (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Calcium6_21420.png" /></td><td style="border:none;"> 21 - 42 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Calcium6_42471.png" /></td><td style="border:none;"> 42 - 47 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Calcium6_47632.png" /></td><td style="border:none;"> 47 - 63 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Calcium6_63843.png" /></td><td style="border:none;"> 63 - 84 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Calcium6_841314.png" /></td><td style="border:none;"> 84 - 131 </td></tr></table>': layer_Calcium6,},{collapsed:false, position:'bottomright'});
+        var n = L.control.layers(testeriono,{'<b>Natrium (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Natrium5_611410.png" /></td><td style="border:none;"> 6.1 - 14.1 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Natrium5_1411931.png" /></td><td style="border:none;"> 14.1 - 19.3 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Natrium5_1932592.png" /></td><td style="border:none;"> 19.3 - 25.9 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Natrium5_2593023.png" /></td><td style="border:none;"> 25.9 - 30.2 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Natrium5_3024734.png" /></td><td style="border:none;"> 30.2 - 47.3 </td></tr></table>': layer_Natrium5,},{collapsed:false, position:'bottomright'});
+        var o = L.control.layers(testeriono,{'<b>Chlorid (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Chlorid4_692180.png" /></td><td style="border:none;"> 6.9 - 21.8 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Chlorid4_2182881.png" /></td><td style="border:none;"> 21.8 - 28.8 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Chlorid4_2883602.png" /></td><td style="border:none;"> 28.8 - 36.0 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Chlorid4_3604463.png" /></td><td style="border:none;"> 36.0 - 44.6 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Chlorid4_4468274.png" /></td><td style="border:none;">44.6 - 82.7 </td></tr></table>': layer_Chlorid4,},{collapsed:false, position:'bottomright'});
+        var p = L.control.layers(testeriono,{'<b>Eisen (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Eisen3_0000010.png" /></td><td style="border:none;"> 0.00 - 0.01</td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Eisen3_0010021.png" /></td><td style="border:none;"> 0.01 - 0.02 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Eisen3_0020062.png" /></td><td style="border:none;"> 0.02 - 0.06 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Eisen3_0060713.png" /></td><td style="border:none;"> 0.06 - 0.2</td></tr><tr><td style="text-align: center;border:none;"></td></tr></table>': layer_Eisen3,},{collapsed:false, position:'bottomright'});
+        var r = L.control.layers(testeriono,{'<b>Kalium (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Kalium2_1281900.png" /></td><td style="border:none;"> 1.28 - 1.90 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Kalium2_1902601.png" /></td><td style="border:none;"> 1.90 - 2.60 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Kalium2_2603202.png" /></td><td style="border:none;"> 2.60 - 3.20 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Kalium2_3204003.png" /></td><td style="border:none;"> 3.20 - 4.00 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Kalium2_4006404.png" /></td><td style="border:none;"> 4.00 - 6.40 </td></tr></table>': layer_Kalium2,},{collapsed:false, position:'bottomright'});
+        var s = L.control.layers(testeriono,{'<b>Magnesium (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Magnesium1_3005550.png" /></td><td style="border:none;"> 3.00 - 5.55 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Magnesium1_5556171.png" /></td><td style="border:none;"> 5.55 - 6.17 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Magnesium1_6177452.png" /></td><td style="border:none;"> 6.17 - 7.45 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Magnesium1_74511953.png" /></td><td style="border:none;"> 7.45 - 11.95 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Magnesium1_119522704.png" /></td><td style="border:none;"> 11.95 - 22.70 </td></tr></table>': layer_Magnesium1,},{collapsed:false, position:'bottomright'});
+        var t = L.control.layers(testeriono,{'<b>Phosphat (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Phosphat0_001001160.png" /></td><td style="border:none;"> 0.010 - 0.116 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Phosphat0_011602061.png" /></td><td style="border:none;"> 0.116 - 0.206 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Phosphat0_020605042.png" /></td><td style="border:none;"> 0.206 - 0.504 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Phosphat0_050410843.png" /></td><td style="border:none;"> 0.504 - 1.084 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Phosphat0_108422504.png" /></td><td style="border:none;"> 1.084 - 2.250 </td></tr></table>': layer_Phosphat0,},{collapsed:false, position:'bottomright'});
+        var u = L.control.layers(testeriono,{'<b>Mangan (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Mangan0_00003000200.png" /></td><td style="border:none;"> 0.0003 - 0.002 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Mangan0_00020000401.png" /></td><td style="border:none;"> 0.002 - 0.004 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Mangan0_00040000502.png" /></td><td style="border:none;"> 0.004 - 0.005 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Mangan0_00050000633.png" /></td><td style="border:none;"> 0.005 - 0.0063 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Mangan0_00063010424.png" /></td><td style="border:none;"> 0.0063 - 0.1 </td></tr></table>': layer_Mangan0,},{collapsed:false, position:'bottomright'});
+        var v = L.control.layers(testeriono,{'<b>Ammonium (mg/l)</b><br /><table><tr><td style="text-align: center;border:none;"><img src="legend/Ammonium0_0000020.png" /></td><td style="border:none;"> 0.00 - 0.02 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Ammonium0_0020041.png" /></td><td style="border:none;"> 0.02 - 0.04 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Ammonium0_0040062.png" /></td><td style="border:none;"> 0.04 - 0.06 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Ammonium0_0060083.png" /></td><td style="border:none;"> 0.06 - 0.08 </td></tr><tr><td style="text-align: center;border:none;"><img src="legend/Ammonium0_008014.png" /></td><td style="border:none;"> 0.08 - 0.1</td></tr></table>': layer_Ammonium0,},{collapsed:false, position:'bottomright'});
+        
+        '</div>'
+        q.addTo(map);
+        
+        var grenz ="nicht vorhanden"; 
+        var dosis = "nicht vorhanden";
+        var info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Wasserhärte1'>";
+       
+       
+        <!--document.getElementById("grenz").innerHTML = grenz;
+	<!--    document.getElementById("dosis").innerHTML = dosis;
+	 <!--   document.getElementById("info").innerHTML = info; !-->
+        
+        function ammonium(){	
+		 
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Mangan0);
+         map.removeLayer(layer_Wasserhrte8);
+         
+         
+         layer_Ammonium0.addTo(map);
+         
+		// var q = L.control.layers(testeriono,{'Wasserhärte<br /><table><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Weich0.png" /></td><td>Weich</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Mittel1.png" /></td><td>Mittel</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Hart2.png" /></td><td>Hart</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_SehrHart3.png" /></td><td>Sehr Hart</td></tr></table>': layer_Wasserhrte8,},{collapsed:false});
+         v.addTo(map);
+         
+         grenz= "0,5 mg/l"; 
+         dosis= "kein Bedarf";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Ammonium1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+		 
+		}
+        
+        
+        
+        
+        
+        function mangan(){	
+		 
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+		 map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         
+         
+         layer_Mangan0.addTo(map);
+         
+		// var q = L.control.layers(testeriono,{'Wasserhärte<br /><table><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Weich0.png" /></td><td>Weich</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Mittel1.png" /></td><td>Mittel</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Hart2.png" /></td><td>Hart</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_SehrHart3.png" /></td><td>Sehr Hart</td></tr></table>': layer_Wasserhrte8,},{collapsed:false});
+         u.addTo(map);
+         
+         grenz= "0,05 mg/l"; 
+         dosis= "2,0 – 5,0 mg/Tag";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Mangan1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+		 
+		}
+        
+        
+       
+        function wasserhärte(){	
+		 
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+         
+         
+         layer_Wasserhrte8.addTo(map);
+         
+		// var q = L.control.layers(testeriono,{'Wasserhärte<br /><table><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Weich0.png" /></td><td>Weich</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Mittel1.png" /></td><td>Mittel</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_Hart2.png" /></td><td>Hart</td></tr><tr><td style="text-align: center;"><img src="legend/Wasserhrte8_SehrHart3.png" /></td><td>Sehr Hart</td></tr></table>': layer_Wasserhrte8,},{collapsed:false});
+         q.addTo(map);
+         
+         grenz= "nicht vorhanden"; 
+         dosis= "nicht vorhanden";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Wasserhärte1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+		 
+		}
+		function ph(){
+			 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+			
+         map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+         
+         grenz= "6,5 bis 9,5"; 
+         dosis= "nicht vorhanden";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#pH-Wert1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+         
+         layer_PhWert7.addTo(map);
+         l.addTo(map);
+		 
+		}
+		function calcium(){
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+			
+	     map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+         grenz= "kein Grenzwert"; 
+         dosis= "1000 mg/Tag";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Calcium1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+
+         layer_Calcium6.addTo(map);
+         
+         m.addTo(map);
+		 
+		}
+		function natrium(){
+			
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+		 map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+         grenz= "150 mg/l"; 
+         dosis= "1500 mg/Tag";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Natrium1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+
+         layer_Natrium5.addTo(map);
+		 n.addTo(map);
+		}
+		function chlorid(){
+			
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+		 map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+         
+         grenz= "250 mg/l "; 
+         dosis= "2300 mg/Tag";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Chlorid1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+
+         layer_Chlorid4.addTo(map);
+		 o.addTo(map);
+		}
+		function eisen(){
+			
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+		 map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+
+         layer_Eisen3.addTo(map);
+		 p.addTo(map);
+		 
+		 
+		 grenz= "0,2 mg/l"; 
+         dosis= "10 mg/Tag für Männer und 15 mg/Tag für Frauen ";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px'  data-toggle='modal' data-target='#Eisen1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+		}
+		function kalium(){
+			
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+		 map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+
+         layer_Kalium2.addTo(map);
+		 r.addTo(map);
+		 
+		 grenz= "12 mg/l"; 
+         dosis= "2000 mg/Tag";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Kalium1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+		}
+		function magnesium(){
+			
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+		 
+		 map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Phosphat0);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+
+         layer_Magnesium1.addTo(map);
+		 s.addTo(map);
+		 
+		 grenz= "50 mg/l"; 
+         dosis= "350 mg/Tag für Männer und 300 mg/Tag für Frauen ";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Magnesium1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+		}
+		function phosphat(){
+			
+		 map.removeControl(q);
+		 map.removeControl(l);
+		 map.removeControl(m);
+		 map.removeControl(n);
+		 map.removeControl(o);
+		 map.removeControl(p);
+		 map.removeControl(r);
+		 map.removeControl(s);
+		 map.removeControl(t);
+		 map.removeControl(v);
+		 map.removeControl(u);
+			
+		 map.removeLayer(layer_Wasserhrte8);
+         map.removeLayer(layer_PhWert7);
+         map.removeLayer(layer_Calcium6);
+         map.removeLayer(layer_Chlorid4);
+         map.removeLayer(layer_Eisen3);
+         map.removeLayer(layer_Kalium2);
+         map.removeLayer(layer_Magnesium1);
+         map.removeLayer(layer_Natrium5);
+         map.removeLayer(layer_Ammonium0);
+         map.removeLayer(layer_Mangan0);
+
+         layer_Phosphat0.addTo(map);
+		 t.addTo(map);
+		 
+		 grenz= "6,7 mg/l"; 
+         dosis= "700 mg/Tag";
+         info ="<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Info_i_blue.svg/2000px-Info_i_blue.svg.png' width='40px' height='40px' data-toggle='modal' data-target='#Phosphat1'>";
+         document.getElementById("grenz").innerHTML = grenz;
+	     document.getElementById("dosis").innerHTML = dosis;
+	     document.getElementById("info").innerHTML = info;
+		}
+        
+        </script>
+        
+ <!--    *************** INFO BOXEN **************** -->
+        
+        <!--Calcium Text-->			
+      <div id="Calcium1" class="modal fade" role="dialog">
+         <div class="modal-dialog">
+<!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p  class="modal-title">Allgemeine Informationen zu Calcium</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Calcium ist wesentlicher Bestandteil von Leitungswasser und zusammen mit Magnesium maßgeblich für den Kalkgehalt (Härtegrad) 
+                     des Wassers verantwortlich. Die Härte des Trinkwassers hat für die meisten Menschen einen Einfluss auf den Geschmack von 
+                     Heiß- bzw. Kaltgetränken. Bei heißen Getränken entfaltet weiches Wasser mit weniger Calcium und Magnesium mehr Geschmack, 
+                     wohingegen bei Kalkgetränken der Effekt umgekehrt ist. Als wichtiges Mineral stellt es auch Teil unserer Nahrung dar, 
+                     trägt aber über das normale Leitungswasser nur in sehr geringen Maßen zur Deckung des Mineralstoffbedarfs bei. 
+                     <br> 
+                     <br>
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a> </sup> 
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Magnesium Text-->
+      <div id="Magnesium1" class="modal fade magnesium" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Magnesium</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Magnesium ist als  Mineralstoff s für die Wirkung der Nervenfunktionen und Muskelbewegung lebensnotwendig.
+                     Es ist neben Calcium eine Ursache für die Wasserhärte.    
+                  <p><sup><a href="info.html">Weitere Parameter-Informationen</a> </sup></p>
+                  </p>								   
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Eisen Text-->						
+      <div id="Eisen1" class="modal fade eisen" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Eisen</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Eisen kommt im Wasser von Natur aus vor. Viele Mineralien im Boden sind eisenhaltig, wie beispielsweise Magnetit, Hämatit oder Goethit. 
+                     Unter normalen Umständen sind Eisen oder Eisenverbindungen im Wasser nicht löslich. Ein geringer pH-Wert begünstigt allerdings die Löslichkeit. 
+                     Durch Verwitterungsprozesse oder einfaches Versickern kann Eisen ins Wasser gelangen. Das Element ist wichtig für jedes Lebewesen und kommt im 
+                     Trinkwasser oder Mineralwasser in Form von Karbonat vor. Grüne Pflanzen und grünes Gemüse sind sehr eisenhaltig. Ein Eisenmangel kann bei Pflanzen
+                     starke Wachstumsprobleme verursachen. Beim Menschen äußert sich dieser durch Müdigkeit, Kopfschmerzen, Abgeschlagenheit, Reizbarkeit und Konzentrationsschwäche.
+                     <br>
+                     <br> 
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a> </sup>	
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Natrium Text-->
+      <div id="Natrium1" class="modal fade natrium" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Natrium</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Natrium kommt von Natur aus im Wasser vor. Es wird aus Gesteinen und einzelnen Erdböden gewaschen und im Grundwasser gelöst. 
+                     Natriumverbindungen gelangen hauptsächlich über Industrieabwässer in die Gewässer. Das Spurenelement ist lebenswichtig für 
+                     Tiere und Menschen. Es ist für die Nervenfunktionen, den Wasserhaushalt im Körper und als Baustein für den Knochenbau 
+                     mitverantwortlich. 
+                     <br>
+                     <br> 
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a>  </sup>				  
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Kalium Text-->							
+      <div id="Kalium1" class="modal fade kalium" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Kalium</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Kalium ist ein Elektrolyt. Es wird von allen Zellen benötigt, damit diese überhaupt funktionieren können. Insbesondere Muskulatur und Nerven sind auf Kalium angewiesen.
+                     <br>
+                     <br> 
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a> </sup>				  
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--phWert Text-->			
+      <div id="pH-Wert1" class="modal fade ph-Wert" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zum pH-Wert</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Der pH-Wert des Wassers bestimmt die Konzentration von freien Wasserstoffatomen und gibt damit an, ob eine Flüssigkeit sauren 
+                     oder basischen Charakter aufweist. Auf einer Skala von 0 bis 14 können damit Säuren und Basen definiert werden. Unterschreitet eine 
+                     Flüssigkeit den neutralen Mittelwert von 7, so handelt es sich um eine Säure, bei Werten über 7 um eine Base.
+                     <br>
+                     Die Haut besitzt einen natürlichen Schutzfilm und ist mit einem pH-Wert von 5,5 leicht sauer. Der Körper reguliert zudem durch komplexe Prozesse 
+                     den pH-Wert des Blutes auf 7,35 bis 7,45 und hält diesen Wert konstant. Für das Trinkwasser gilt jedoch ein erhöhter Toleranzbereich. Gemäß 
+                     der Trinkwasserverordnung dürfen die Werte im Bereich zwischen 6,5 und 9,5 schwanken.
+                     <br>
+                     <br> 
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a> </sup>				  
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Wasserhärte in de Text--> 
+      <div id="Wasserhärte1" class="modal fade wasserhärte" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zur Wasserhärte in dH</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>In der Einheit „deutsche Härtegrade“ wird die sogenannte Wasserhärte (= Kalkgehalt) angegeben. Hierbei handelt es sich um einen Parameter, dessen Aussagekraft eher 
+                     technische Relevanz besitzt, um z.B. einschätzen zu können, in welcher Größenordnung mit Kalkablagerungen im Rohrleitungssystem des Hauses bzw. beim Einsatz bestimmter 
+                     Hausgeräte (Wasch- und Spülmaschinen, Kaffeemaschinen, Wasserkocher etc.) zu rechnen ist. Hohe Werte sollten hier eventuell zu der Überlegung führen, mittels einer Enthärtungsanlage 
+                     vorzubeugen. Weicheres Wasser bietet neben dem Schutz der Rohre und Haushaltsgeräte auch den Vorteil, dass Armaturen, Dusch- und Badewannen leichter zu reinigen sind (bzw. nicht mehr 
+                     verkalken) und bei der Wäsche weniger Waschmittel eingesetzt werden muss. 
+                     <br>
+                     <br> 
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a>  </sup>				  
+               </div>
+            </div>
+         </div>
+      </div>
+       <!--Chlorid in de Text--> 
+      <div id="Chlorid1" class="modal fade chlorid" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Chlorid</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>
+					  Chlorid ist ein Mineralstoff und kommt zusammen mit Natrium als Kochsalz in fast allen Lebensmitteln
+					   vor. Es ist in jedem natürlichen Wasser enthalten. Je nach Wasserzusammensetzung können Chloridgehalte 
+					   über 100 mg/l bereits korrosionsfördernd wirken und sind hierdurch am Prozess der Lochfraß- 
+					   korrosion massgeblich beteiligt. Die Trinkwasserverordnung setzt einen Grenzwert von 250 mg/l.
+					   Chlorid und Natrium sind neben Kalium für Magen-Darm-Probleme von Bedeutung, 
+					   da sie einen natürlichen Bestandteil der Magensäure bilden.
+					   Eine Unterversorgung des Körpers mit Chlorid kann hingegen die Bildung der Magensäure hemmen und somit zu Durchfall führen. 
+					   Einen besonderen Stellenwert hat Chlorid auch bei der Zubereitung von Babynahrung, da es den natürlichen Wachstumsprozess fördert.
+
+					  
+                     <br>
+                     <br> 
+                    <!-- <sup> <a href="info.html">Weitere Parameter-Informationen</a>  </sup>		-->		  
+               </div>
+            </div>
+         </div>
+      </div>
+      
+       <!--Phosphat in de Text--> 
+      <div id="Phosphat1" class="modal fade phosphat" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Phosphat</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>
+					  Phosphat ist ein Mineralstoff. Bedeutung hat Phosphat für die Energieversorgung der Zellen. In fast
+					   allen Lebensmitteln, insbesondere in eiweissreichen Milchprodukten, kommt Phosphor vor. Der Phosphatgehalt 
+					   im Trinkwasser darf 6,7 mg/l nicht überschreiten. 
+					   Phosphor gilt unter den Mineralstoffen als eine Art Multitalent, 
+					   denn es vereint mehrere funktionelle Eigenschaften anderer Stoffe in sich. 
+					   Der Mineralstoff gilt zwar als Baustein der Erbsubstanz, führt bei Mangelerscheinungen aber selten zu Nebenwirkungen, 
+					   wenn Sie das Defizit durch eine ausreichende Zufuhr an Magnesium und Kalzium kompensieren.
+
+                     <br>
+                     <br> 
+                  <!--   <sup> <a href="info.html">Weitere Parameter-Informationen</a>  </sup>	-->			  
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      <div id="Mangan1" class="modal fade mangan" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Mangan</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Mangan ist ein chemisches Element, welches ähnliche Eigenschaften wie Eisen aufweist. Es ist neben 
+                     Eisen das zweithäufigste Metall und kommt sehr oft in der Erdkruste als chemische Verbindung vor: meist 
+                     in Form von Braunstein, aber auch als Manganit oder Rhodonit. Nach dem Abbau wird das Element vor allem 
+                     in der Stahlindustrie für Legierungen verwendet.
+                     <br>
+                     <br> 
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a>  </sup>				  
+               </div>
+            </div>
+         </div>
+      </div>
+       <!--Ammonium Text-->
+      <div id="Ammonium1" class="modal fade ammonium" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal Allgemein content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <b>
+                     <p class="modal-title">Allgemeine Informationen zu Ammonium</p>
+                  </b>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <p>Ammonium ist ein Umwandlungsprodukt von Ammoniak und entsteht in erster Linie beim Abbau von Proteinen. 
+                     Zusätzlich ist es besonders gut wasserlöslich. Mit der Hilfe von anderen Luftschadstoffen wie 
+                     beispielsweise Schwefeldioxid wandelt sich gasförmiges Ammoniak zu Ammoniumsalzen um und verteilt sich 
+                     als Partikel in der Luft als Aerosole. Zudem ist Ammonium in der Umwelt im Regen, Tau und Nebel belegbar.
+                     Die Landwirtschaft ist in Deutschland der Hauptverursacher von Ammoniak und letztendlich Ammonium. Die 
+                     Verbindung entsteht als Nebenprodukt bei der Nutztierhaltung, in welcher Mikroorganismen organische Substanzen 
+                     wie beispielsweise Harn zersetzen. Ferner findet es als Mineraldünger für Nutzpflanzen Verwendung.
+                     <br>
+                     <br> 
+                     <sup> <a href="info.html">Weitere Parameter-Informationen</a>  </sup>				  
+               </div>
+            </div>
+         </div>
+      </div>
+ 
+ <!--    *************** INFO BOXEN ENDE *********** -->
+        
+				  
+			<!--	  </div>
+				  </div>
+				</div>
+			  </div>
+   <!-- </body> !-->
+     
+     <!-- **************************************
+           WASSER-HÄRTE MAP END
+          ************************************** !-->
+          
+  <!-- ******************** ZUSATZ 2 ************ !-->
+  
+  <!--************************************
+			Counter Start
+	*************************************-->
+	
+	
+	<style type="text/css">
+.tg {
+    border-collapse: collapse;
+    width: 1050px;
+    height: 50px;
+    margin: auto;
+}
+
+.tg th, td {
+    text-align: center;
+    padding: 8px;
+}
+.tg th {
+    background-color: #4071b4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tg tr:nth-child(even){background-color: #f2f2f2}
+
+</style>
+	
+	<table class="tg">
+  <tr>
+    <th class="tg-031e">Grenzwert : <b id="grenz"> </b> </th>
+    <th class="tg-031e">Tagesdosis : <b id="dosis"> </b> </th>
+    <th class="tg-031e"><b id="info"></b></th>
+  </tr>
+  <script> 
+	 document.getElementById("grenz").innerHTML = grenz;
+	 document.getElementById("dosis").innerHTML = dosis;
+	 document.getElementById("info").innerHTML = info;
+ 
+ </script>
+  
+</table>
+	
+
+    <!--************************************
+			Counter End
+	*************************************--> 
+  
+ <!-- *******************Zusatz ENDE ***************** !-->
+
+				  </div>
+				  </div>
+				</div>
+			  </div>
+
+
+<!-- KARTE ALT ANFANG 
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css" />
+        <link rel="stylesheet" href="./resources/ol3-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        
+        <style>
+        #map {
+            width: 1502px;
+            height: 535px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body >
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="resources/polyfills.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol3-layerswitcher.js"></script>
+        <script src="layers/deu_adm2_layer0.js"></script><script src="layers/Stdte_Mastertabelle1.js"></script>
+        <script src="styles/deu_adm2_layer0_style.js"></script><script src="styles/Stdte_Mastertabelle1_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/qgis2web.js"></script>
+        <script src="./resources/Autolinker.min.js"></script>
+    </body>
+    KARTE ALT ENDE !-->
+
+<!----- GOOGLE MAPS ------>
+
+<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2022316.4539182838!2d5.863455652855565!3d51.416994929508995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9167c8e4248a1%3A0x2f4c327e4fd78f5f!2sNordrhein-Westfalen!5e0!3m2!1sde!2sde!4v1500325127169" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+-->
+</section>
+</main>
+		<!--************************************
+				Main End
+		*************************************-->
+
+	<!--************************************
+				Footer Start
+		*************************************-->
+		<footer id="footer" class="tg-haslayout">
+			<div class="four-columns haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+							<div class="col aboutus">
+								<strong class="logo">
+									<a href="index.html"><img src="images/logo22.png" alt="image description"></a>
+								</strong>
+								<div class="tg-description">
+									<p>
+									<!-- Bei der "Drinking Water Quality Group" <br>handelt es sich um ein studentisches Gruppenprojekt,
+									dass im Rhamen des Masterseminars "Wissensrepräsentation und Wissensmanagement" entstanden ist.
+									<!--Für die "Drinking Water Quality Group" ist die Qualität des Trinkwasser besonders wichtig und
+									möchte dies in Form von Graphiken, Karten und informativen Texten näher bringen.-->
+									</p>
+								</div>
+								<!--<ul class="tg-socialicon">
+									<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								</ul> -->
+							</div>
+						</div>
+						
+						<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+                          <div class="col tg-recent-post">
+                         <!-- <div class="tg-heading-border">
+                            <!-- <h3>Über uns</h3> -->
+                       <!--  </div> -->
+                         <div class="tg-description">
+									<p>
+									Bei der "Drinking Water Quality Group" <br>handelt es sich um ein studentisches <br>Gruppenprojekt,
+									dass im Rhamen des <br>Masterseminars "Wissensrepräsentation <br>und Wissensmanagement" entstanden ist.
+									</p>
+								</div>
+                          </div>
+                           </div>
+						
+						
+						<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+            <div class="col tg-recent-post">
+              <div class="tg-heading-border">
+                <h3>Über uns</h3>
+              </div>
+              <ul>
+                <li> <a href="team.html">
+                  <p>Unser Team</p>
+                  </a> </li>
+                <li> <a href="team.html#projekt">
+                  <p>Das Projekt</p>
+                  </a> </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+            <div class="col tg-tags">
+              <div class="tg-heading-border">
+                <h3>Lizenz & Recht</h3>
+              </div>
+              <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+                 <li><a href="lizenzen.html">Lizenzen</a></li>
+                 <li><a href="daten.html">Daten</a></li>
+              </ul>
+            </div>
+          </div>
+          
+					<!--	<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
+							<div class="col tg-flicker">
+								<div class="tg-heading-border">
+									<h3>Flickr Stream</h3>
+								</div>
+								<ul>
+									<li>
+										<a href="images/thumbs/thumb-04.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/img0123.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-05.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/img1.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-06.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/1.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-07.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/2.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-08.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/3.jpg" alt="image description"></a>
+									</li>
+									<li>
+										<a href="images/thumbs/thumb-09.jpg" data-rel="prettyPhoto[flickr]"><img src="images/flickr/4.jpg" alt="image description"></a>
+									</li>
+								</ul>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			<div class="bottom-bar haslayout">
+				<div class="container">
+					<div class="copyright"><p>Copyright 2016 &copy; <a href ="http://freecssthemes.com/" target="_blank" title="Click to get this template!"/>FreeCssThemes</a> | All Rights Reserved</p></div>
+				</div>
+			</div>
+		</footer>
+		<!--************************************
+				Footer End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	
+	<script src="js/vendor/jquery-pulgin.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/prettyPhoto.js"></script>
+	<script src="js/isotope.pkgd.js"></script>
+	<script src="js/hoverdir.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/appear.js"></script>
+	<script src="js/countTo.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/nicescroll.js"></script>
+	<script src="js/handlebars.min.js"></script>
+	<script src="js/gmap3.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
