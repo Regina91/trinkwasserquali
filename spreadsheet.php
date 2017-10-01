@@ -104,7 +104,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<strong class="logo">
-							<a href="index.html"> <img src="images/logo22.png" alt="image description"></a>
+							<a href="index.html"> <img src="images/logo222.png" alt="image description"></a>
 						</strong>
 						<div class="tg-rightarea">
 							<nav id="tg-nav" class="tg-nav">
@@ -118,7 +118,7 @@
 								</div>
 								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 									<ul class="navbar-right">
-										<li ><a href="index.html">&uuml;ber uns</a>
+										<li ><a href="index.html">Trinkwasserqualität</a>
 										
 									</li>
 									<li><a href="karte.html">&uuml;bersichtskarte NRW</a></li>
@@ -135,8 +135,7 @@
                                     <li><a href="grenzwerte.html">Grenzwerte</a></li>
                                  </ul>
                               </li>
-                              
-                             <li> <a href="#">About</a>
+									<li> <a href="#">About</a>
 				                         <ul>
 											<li><a href="team.html">Das Team</a></li>
 											<li><a href="impressum.html">Impressum</a></li>
@@ -144,6 +143,7 @@
 											<li><a href="daten.html">Daten</a></li>
 										</ul>
 									</li>
+                              
 									
 									<!--<li>
 										<a href="#"><span>pages</span><i class="fa fa-navicon"></i></a>
@@ -192,14 +192,27 @@
             <div class="tg-section-head">
             	<h2>Trinkwasserwerte meiner Region</h2>
 					  </div>
+					  						
 					  <div class="tg-description">
 						<p>
+						
+					<script type="text/javascript">
+						var x = document.location;
+						x = x.toString();
+						x = x.split('=')[1];;
+						x = decodeURIComponent(x);
+						document.write("<p>Gewählt wurde die Stadt: " + x.bold()+ "</p>");
+					</script>
+					
+						<br><br>
 						Auf der folgenden Tabelle sind alle Trinkwasserwerte deiner Region aufgelistet. 
+						<br><br>
 						Mehr Informationen zu den wichtigsten Parametern erhälst du auf unserer <a href="info.html">Informationsseite</a>.
 						<br><br>
 						<p align="center"><a href="stadt.html"><b>Zurück zur Stadtauswahl</b></a></p>
 						
 						</p><br>
+
 					  </div>
 
 		<table id="tableResults" class="tableResults">
@@ -208,7 +221,9 @@
 		
 		<p align="center"><i><b>Legende:</b> <br>	
         Härte: 1= weich, 2 = mittel, 3 = hart	 <br>	
-        TOC = Organisch gebundener Kohlenstoff </i></p>
+        TOC = Organisch gebundener Kohlenstoff <br>
+        n.a = nicht angegeben <br>
+        n.n = nicht nachgewiesen </i></p>
 		<br><br>
 		<p align="center"><a href="stadt.html"><b>Zurück zur Stadtauswahl</b></a></p>
 		
@@ -306,7 +321,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6 width-footercol">
 							<div class="col aboutus">
 								<strong class="logo">
-									<a href="index.html"><img src="images/logo22.png" alt="image description"></a>
+									<a href="index.html"><img src="images/logo222.png" alt="image description"></a>
 								</strong>
 								<div class="tg-description">
 									<p>
